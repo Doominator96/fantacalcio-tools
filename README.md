@@ -21,7 +21,9 @@ ti consiglio di dare un'occhiata a [composer.json Schema](https://getcomposer.or
 
 Nella sezione `require` o alternativamente in `require-dev` aggiungi la seguente dipendenza:
 
-> "dlondero/fantacalcio-tools": "dev-master"
+```json
+"dlondero/fantacalcio-tools": "dev-master"
+```
 
 ## Usage
 
