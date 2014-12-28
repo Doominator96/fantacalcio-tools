@@ -9,7 +9,10 @@ amministra qualche lega tra amici.
 Strumenti disponibili:
 
 - Convertitore da file voti Fantagazzetta a file csv
-- Scraper classifica serie A da Gazzetta (coming soon)
+
+Coming soon:
+
+- Scraper classifica serie A da Gazzetta
 
 ## Install
 
@@ -18,7 +21,7 @@ ti consiglio di dare un'occhiata a [composer.json Schema](https://getcomposer.or
 
 Nella sezione `require` o alternativamente in `require-dev` aggiungi la seguente dipendenza:
 
-"dlondero/fantacalcio-tools": "dev-master"
+> "dlondero/fantacalcio-tools": "dev-master"
 
 ## Usage
 
