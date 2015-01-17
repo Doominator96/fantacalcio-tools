@@ -11,6 +11,7 @@
     ],
     "license": "MIT",
     "require": {
+        "php": ">=5.5.9",
         "symfony/dom-crawler": "3.0.*@dev",
         "symfony/css-selector": "3.0.*@dev"
     },
