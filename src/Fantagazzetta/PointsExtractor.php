@@ -29,7 +29,10 @@ class PointsExtractor
         $this->_source = file_get_contents($source);
     }
 
-    public function parse()
+    /**
+     * @param bool $skipCoach
+     */
+    public function parse($skipCoach = false)
     {
         $valueList = [];
         $crawler = new Crawler($this->_source);
@@ -44,6 +47,13 @@ class PointsExtractor
                 $valueList[] = $row;
             }
         });
+
+        if ($skipCoach) {
+            $valueList = array_filter($valueList, function ($item) {
+                return $item[1] !== 'ALL';
+            });
+            $valueList = array_values($valueList);
+        }
 
         $this->_valueList = $valueList;
     }

@@ -23,7 +23,19 @@ class PointsExtractorTest extends \PHPUnit_Framework_TestCase
 
         $pointsExtractor = new PointsExtractor(__DIR__ . '/../Fixtures/voti.xls');
         $pointsExtractor->parse();
-        
+
+        $this->assertSame($expectedArray, $pointsExtractor->getAsArray());
+    }
+
+    public function testParseNoCoach()
+    {
+        $expectedArray = array_map('str_getcsv', file(__DIR__ . '/../Fixtures/results-nocoach.csv'));
+        unset($expectedArray[0]);
+        $expectedArray = array_values($expectedArray);
+
+        $pointsExtractor = new PointsExtractor(__DIR__ . '/../Fixtures/voti.xls');
+        $pointsExtractor->parse(true);
+
         $this->assertSame($expectedArray, $pointsExtractor->getAsArray());
     }
 
